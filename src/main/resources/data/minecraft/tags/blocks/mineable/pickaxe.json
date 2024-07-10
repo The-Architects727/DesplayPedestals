@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "itemdisplay:item_display",
+        "itemdisplay:altar_display"
+    ]
+}

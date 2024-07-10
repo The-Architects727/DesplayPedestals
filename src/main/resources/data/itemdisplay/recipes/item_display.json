@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "itemdisplay:display",
+  "pattern": [
+    " L ",
+    "SCS"
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:end_stone_brick_slab"
+    },
+    "S": {
+      "item": "minecraft:end_stone_brick_stairs"
+    },
+    "C": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "itemdisplay:item_display"
+  }
+}

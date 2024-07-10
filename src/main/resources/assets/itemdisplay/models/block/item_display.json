@@ -1,0 +1,9 @@
+{
+  "parent": "itemdisplay:block/base/item_display_base",
+  "textures": {
+    "0": "itemdisplay:block/stone_bot",
+    "1": "itemdisplay:block/stone_top",
+    "2": "itemdisplay:block/stone_pillar",
+    "particle": "itemdisplay:block/stone_top"
+  }
+}
