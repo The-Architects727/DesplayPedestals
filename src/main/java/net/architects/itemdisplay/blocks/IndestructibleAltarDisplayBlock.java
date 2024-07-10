@@ -144,8 +144,9 @@ public class IndestructibleAltarDisplayBlock extends Block implements EntityBloc
         if (state.getBlock() != newState.getBlock()) {
             BlockEntity tileentity = worldIn.getBlockEntity(pos);
             if (tileentity instanceof IndestructableAltarDisplayTile) {
-                Containers.dropItemStack(worldIn, pos.getX(), pos.getY(), pos.getZ(), ((IndestructableAltarDisplayTile) tileentity).getItem()
-                        .copy());
+                ItemStack item = ((IndestructableAltarDisplayTile) tileentity).getItem().copy();
+                item.setCount(1);
+                Containers.dropItemStack(worldIn, pos.getX(), pos.getY(), pos.getZ(), item);
             }
             super.onRemove(state, worldIn, pos, newState, isMoving);
         }

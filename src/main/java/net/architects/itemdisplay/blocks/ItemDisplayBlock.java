@@ -144,8 +144,9 @@ public class ItemDisplayBlock extends Block implements EntityBlock {
         if (state.getBlock() != newState.getBlock()) {
             BlockEntity tileentity = worldIn.getBlockEntity(pos);
             if (tileentity instanceof ItemDisplayTile) {
-                Containers.dropItemStack(worldIn, pos.getX(), pos.getY(), pos.getZ(), ((ItemDisplayTile) tileentity).getItem()
-                        .copy());
+                ItemStack item = ((ItemDisplayTile) tileentity).getItem().copy();
+                item.setCount(1);
+                Containers.dropItemStack(worldIn, pos.getX(), pos.getY(), pos.getZ(), item);
             }
             super.onRemove(state, worldIn, pos, newState, isMoving);
         }
